@@ -1,0 +1,252 @@
+@charset "UTF-8";
+
+.slider{
+    /* background-color: #ce4d29; */
+}
+.slider.slick-initialized{
+    /* display: block; */
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #e0e0e0;
+}
+#container{
+    width: 80%;
+    margin: 40px auto;
+}
+
+/*　ヘッダー　*/
+#logo_box{
+    display: flex;
+}
+#club{
+    margin-left: auto;
+}
+
+/*nav{
+}
+nav ul{
+    background-color: red;
+    margin: 80px auto;
+    width: 70%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+nav li{
+    margin: 16px 0;
+    padding: 1em 0;
+    width: 80%;
+    background-color: aquamarine;
+}*/
+
+.spacing{
+    opacity: 0;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 3px solid #111111;
+    width: 70%;
+    margin-bottom: 48px;
+}
+main h2{
+    width: 100%;
+    text-align: center;
+    border-bottom: 3px solid #111111;
+    padding: 64px 0 12px;
+}
+main p{
+    /* width: 100%; */
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 8px 0;
+}
+main section > :nth-child(2){
+    margin-top: 48px;
+}
+main section > :last-child{
+    margin-bottom: 48px;
+}
+
+.slider.slick-list{
+    /* overflow: hidden; */
+}
+
+#overview{
+    position: relative;
+}
+#overview .note{
+    width: 90%;
+}
+
+/*　活動場所　*/
+#place p{
+    font-size: 3em;
+}
+
+/*　部員数　*/
+#club_members dl{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#club_members .dl_row{
+    display: flex;
+}
+#club_members dt,dd{
+    font-size: 2em;
+    line-height: 2em;
+}
+
+/*　週間予定　*/
+#weekly_schedule{
+}
+#weekly_schedule table{
+    border-collapse: collapse;
+    margin: 48px 0;
+    background-color: #fdfdfd;
+}
+#saturday{
+    color: #4343c7;
+}
+#sunday{
+    color: #ce4d29;
+}
+#weekly_schedule table *{
+    border: 1px solid #000000;
+    text-align: center;
+    padding: 0 10px;
+    height: 40px;
+}
+
+/*　年間予定　*/
+#yearly_schedule{
+}
+#yearly_schedule dl{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #f0f0f0;
+}
+#yearly_schedule .dl_row{
+    width: 100%;
+    display: flex;
+    border: solid 1px #000000;
+    border-bottom: none;
+}
+#yearly_schedule .dl_row:last-child{
+    border-bottom: solid 1px #000000;
+}
+#yearly_schedule dt{
+    font-size: 1.5em;
+    line-height: 2em;
+    padding: 0 1em;
+    border-right: solid 1px #000000;
+}
+#yearly_schedule dd{
+    margin: auto 0;
+    font-size: 1em;
+    text-indent: 1em;
+}
+
+/*　資格について　*/
+.note{
+    background-color: #fef8eb;
+    border: solid 2px #999999; 
+    padding: 0 1em 0 2em;
+    position: relative;
+}
+.note p{
+    border-bottom: dashed 1px #cccccc;
+    line-height: 1.5;
+    padding: 0.5em 0 0.5em 0.5em;
+}
+#about_qualification mark{
+    background: linear-gradient(to bottom,transparent 40%,#ffff00 40% 80%,transparent 80%);
+}
+.note p:last-of-type{
+    border-bottom: none;
+}
+.note p::before{
+    content: "";
+    position: absolute;
+    border-right: dotted 10px #dddddd;
+    height:90%;
+    top:0.5em;
+    left:0.5em;
+}
+
+/*　目指す資格　*/
+#target ul{
+    background-color: #fef8eb;
+    width: 90%;
+    padding: 16px 0;
+    list-style-type: none;
+    background-image: url("img/qualification.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    z-index: 1;
+}
+#target li{
+    font-size: 1.5em;
+    text-indent: 2em;
+    position: relative;
+    border-bottom: dashed 1px #cccccc;
+    line-height: 1.5em;
+    padding: 0.5em 0 0.5em 0.5em;
+
+}
+#target li::before{
+    content: "・";
+    position: absolute;
+    left: -1em;
+}
+#target li::after{
+    content: "";
+    position: absolute;
+    border-right: dotted 9px #dddddd;
+    height:90%;
+    top:0em;
+    left: 8px;
+}
+#target .wave{
+}
+
+#club_members{
+    background-image: url("img/whitebord.svg");
+    background-repeat: no-repeat;
+    background-position: right 15% bottom;
+    padding-bottom: 4%;
+}
+/*#club_members dl > :last-child::after{
+        content: url("img/whitebord.svg");
+        position: absolute;
+        width: 150%;
+        top: 33%;
+        left: 27%;
+        z-index: -1;
+        
+    
+    
+}*/
