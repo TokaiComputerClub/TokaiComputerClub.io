@@ -1,10 +1,11 @@
 @charset "UTF-8";
 
-.slider{
-    /* background-color: #ce4d29; */
+#Slider{
+    width: 100%;
+    height: 400px;
 }
-.slider.slick-initialized{
-    /* display: block; */
+#Slider img{
+    height: 400px;
 }
 *{
     box-sizing: border-box;
@@ -16,7 +17,7 @@ body{
     background-color: #e0e0e0;
 }
 #container{
-    width: 80%;
+    width: clamp(80vw,calc(calc(calc(80vw - 850px) * -1) + 80vw ),100vw);
     margin: 40px auto;
 }
 
@@ -239,14 +240,8 @@ main section > :last-child{
     background-position: right 15% bottom;
     padding-bottom: 4%;
 }
-/*#club_members dl > :last-child::after{
-        content: url("img/whitebord.svg");
-        position: absolute;
-        width: 150%;
-        top: 33%;
-        left: 27%;
-        z-index: -1;
-        
+
+
+@media screen {
     
-    
-}*/
+}
