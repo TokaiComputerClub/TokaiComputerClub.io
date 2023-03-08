@@ -1,60 +1,54 @@
 @charset "UTF-8";
+@font-face {
+    font-family: "tanuki_chalk";
+    src: url("fonts/tanuki_font.woff2") format("woff2");
+}
 
-#Slider{
-    width: 100%;
-    height: 400px;
-}
-#Slider img{
-    height: 400px;
-}
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
+.spacing{opacity: 0;}
+
 
 body{
     background-color: #e0e0e0;
+    /*background-image: url(img/brain.jpg);
+    background-size: cover;
+    background-attachment: fixed;*/
 }
 #container{
-    width: clamp(80vw,calc(calc(calc(80vw - 850px) * -1) + 80vw ),100vw);
+    width: 80%;
     margin: 40px auto;
 }
 
 /*　ヘッダー　*/
-#logo_box{
+header{
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+}
+#school{
+    /* width: min(110vw,100vw); */
+    background-color: #fdfdfd;
 }
 #club{
+    /* width: min(110vw,100vw); */
     margin-left: auto;
 }
 
-/*nav{
+/*　スライドショー　*/
+#Slider{
+    width: 100%;
+    margin: 32px 0;
+    height: 500px;
 }
-nav ul{
-    background-color: red;
-    margin: 80px auto;
-    width: 70%;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#Slider img{
+    height: 500px;
 }
-nav a{
-    display: block;
-    text-decoration: none;
-    text-align: center;
-}
-nav li{
-    margin: 16px 0;
-    padding: 1em 0;
-    width: 80%;
-    background-color: aquamarine;
-}*/
 
-.spacing{
-    opacity: 0;
-}
+/*　メイン全般　*/
 main{
     display: flex;
     flex-direction: column;
@@ -64,18 +58,21 @@ main section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 3px solid #111111;
+    border-bottom: 8px solid #111111;
+    border-radius: 8px;
     width: 70%;
     margin-bottom: 48px;
 }
 main h2{
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
-    border-bottom: 3px solid #111111;
-    padding: 64px 0 12px;
+    border-bottom: 8px solid #111111;
+    background-color: #cccccc;
+    border-radius: 4px;
+    padding: 8px 8px 6px;
+    margin-top: 64px;
 }
 main p{
-    /* width: 100%; */
     font-size: 1em;
     line-height: 1.5em;
     margin: 8px 0;
@@ -87,10 +84,7 @@ main section > :last-child{
     margin-bottom: 48px;
 }
 
-.slider.slick-list{
-    /* overflow: hidden; */
-}
-
+/*　概要　*/
 #overview{
     position: relative;
 }
@@ -99,11 +93,28 @@ main section > :last-child{
 }
 
 /*　活動場所　*/
+#place .flame{
+    height: 100%;
+    background-image: url("img/blackbord.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 100px 32px;
+}
 #place p{
-    font-size: 3em;
+    font-family: "tanuki_chalk";
+    color: #ffffff;
+    opacity: 0.9;
+    font-size: 3em; 
 }
 
 /*　部員数　*/
+#club_members{
+    background-image: url("img/whitebord.svg");
+    background-repeat: no-repeat;
+    background-position: right 15% bottom;
+    padding-bottom: 4%;
+}
 #club_members dl{
     width: 100%;
     display: flex;
@@ -143,7 +154,7 @@ main section > :last-child{
 #yearly_schedule{
 }
 #yearly_schedule dl{
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -200,7 +211,7 @@ main section > :last-child{
 /*　目指す資格　*/
 #target ul{
     background-color: #fef8eb;
-    width: 90%;
+    width: max(425px,90%);
     padding: 16px 0;
     list-style-type: none;
     background-image: url("img/qualification.svg");
@@ -234,14 +245,5 @@ main section > :last-child{
 #target .wave{
 }
 
-#club_members{
-    background-image: url("img/whitebord.svg");
-    background-repeat: no-repeat;
-    background-position: right 15% bottom;
-    padding-bottom: 4%;
-}
 
-
-@media screen {
-    
-}
+/*　顧問からのメッセージ　*/
