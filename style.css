@@ -320,15 +320,15 @@ header p{
 
 
 
-/*@media screen and (max-width:1100px) {
+@media screen and (max-width:1100px) {
     #container{
-        width: 560px;
+        width: 740px;
     }
     #container{
         font-size: 1em;
     }
     #contents section{
-        width: 100%;
+        width: 90%;
     }
 }
 
