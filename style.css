@@ -3,10 +3,6 @@
     font-family: "tanuki_chalk";
     src: url("fonts/tanuki_font.woff2") format("woff2");
 }
-@font-face {
-    font-family: "yuji_title";
-    src: url("fonts/yuji_font.woff2") format("woff2");
-}
 
 *{
     box-sizing: border-box;
@@ -16,7 +12,9 @@
 
 
 body{
-    background-color: #222222;
+    background-image: url("images/neverstoplearning_back.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 #container{
@@ -45,6 +43,7 @@ header p{
 /*========== ヘッダー ==========*/
 
 
+
 /*---------- スライドショー ----------*/
 
 #Slider{
@@ -57,6 +56,7 @@ header p{
 }
 
 /*========== スライドショー ==========*/
+
 
 
 /*---------- コンテンツ ----------*/
@@ -179,13 +179,12 @@ header p{
     width: 100%;
     padding: 32px 0;
 }
+#members_box{
+    margin: auto;
+}
 #club_members dl{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#club_members .dl_row{
-    display: flex;
+    justify-content: center;
 }
 #club_members dt,
 #club_members dd{
@@ -271,12 +270,15 @@ header p{
 
 
 /*------- 目指す資格 -------*/
+#target .flame{
+    width: max(425px,90%);
+    /* padding: 16px 0 0; */
+    position: relative;
+}
 #target ul{
     background-color: #fef8eb;
-    width: max(425px,90%);
-    padding: 16px 0;
     list-style-type: none;
-    position: relative;
+    padding: 16px 0 ;
 }
 #target li{
     font-size: 1.5em;
@@ -323,10 +325,10 @@ footer{
     display: flex;
     flex-direction: column;
 }
-footer dl{
+#link_box{
     margin: auto;
 }
-footer .dl_row{
+footer dl{
     display: flex;
 }
 footer dd{
