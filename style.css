@@ -202,7 +202,7 @@ body{
 
 /*------- 年間予定 -------*/
 #calender_box{
-    width: 90%;
+    width: auto;
 }
 #yearly_schedule dl{
     width: 100%;
@@ -240,7 +240,7 @@ body{
 
 /*------- 目指す資格 -------*/
 #target .flame{
-    width: max(425px,90%);
+    width: auto;
     /* padding: 16px 0 0; */
     position: relative;
 }
@@ -310,7 +310,7 @@ body{
         width: 100%;
     }
     #container{
-        font-size: 1em;
+        font-size: 2em;
     }
     #contents section{
         width: 100%;
