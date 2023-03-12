@@ -3,42 +3,50 @@
     font-family: "tanuki_chalk";
     src: url("fonts/tanuki_font.woff2") format("woff2");
 }
+@font-face {
+    font-family: "yuji_title";
+    src: url("fonts/yuji_font.woff2") format("woff2");
+}
 
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-.spacing{opacity: 0;}
 
 
 body{
-    background-color: #e0e0e0;
-    /*background-image: url(img/brain.jpg);
-    background-size: cover;
-    background-attachment: fixed;*/
+    background-color: #222222;
 }
+
 #container{
-    width: 80%;
+    width: 1040px;
     margin: 40px auto;
 }
 
-/*　ヘッダー　*/
+
+/*---------- ヘッダー ----------*/
+
 header{
-    width: 100%;
+    height: 100px;
+    background-color: #f0f0f0e0;
+    border-radius: 4px 4px 0 0;
     display: flex;
-    flex-wrap: wrap;
 }
-#school{
-    /* width: min(110vw,100vw); */
-    background-color: #fdfdfd;
+header p{
+    font-size: 3em;
+    padding: 8px 32px;
+    font-family: "yuji_title";
 }
 #club{
-    /* width: min(110vw,100vw); */
     margin-left: auto;
 }
 
-/*　スライドショー　*/
+/*========== ヘッダー ==========*/
+
+
+/*---------- スライドショー ----------*/
+
 #Slider{
     width: 100%;
     margin: 32px 0;
@@ -48,13 +56,20 @@ header{
     height: 500px;
 }
 
-/*　メイン全般　*/
-main{
+/*========== スライドショー ==========*/
+
+
+/*---------- コンテンツ ----------*/
+
+/*------- 全般 -------*/
+#contents{
+    background-color: #f0f0f0e0;
+    border-radius: 4px 4px 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-main section{
+#contents section{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,60 +78,108 @@ main section{
     width: 70%;
     margin-bottom: 48px;
 }
-main h2{
-    /* width: 100%; */
+#contents h2{
     text-align: center;
     border-bottom: 8px solid #111111;
-    background-color: #cccccc;
+    background-color: #dfb554b7;
     border-radius: 4px;
     padding: 8px 8px 6px;
     margin-top: 64px;
 }
-main p{
+#contents p{
     font-size: 1em;
     line-height: 1.5em;
     margin: 8px 0;
 }
-main section > :nth-child(2){
+#contents section > :nth-child(2){
     margin-top: 48px;
 }
-main section > :last-child{
+#contents section > :last-child{
     margin-bottom: 48px;
 }
+/*======= 全般 =======*/
 
-/*　概要　*/
+
+/*------- .note -------*/
+/*参考 "https://sarubako.com/css-box-looseleaf"*/
+.note{
+    background-color: #fef8eb;
+    border: solid 2px #999999; 
+    padding: 0 1em 0 2em;
+    position: relative;
+}
+.note p{
+    border-bottom: dashed 1px #cccccc;
+    line-height: 1.5;
+    padding: 0.5em 0 0.5em 0.5em;
+}
+.note p:last-of-type{
+    border-bottom: none;
+}
+.note p::before{
+    content: "";
+    position: absolute;
+    border-right: dotted 10px #dddddd;
+    height:90%;
+    top:0.5em;
+    left:0.5em;
+}
+/*======= .note =======*/
+
+
+/*------- .spacing -------*/
+.spacing{
+    opacity: 0;
+}
+/*======= .spacing =======*/
+
+
+/*--------- index ---------*/
+
+/*------- 概要 -------*/
 #overview{
     position: relative;
 }
 #overview .note{
     width: 90%;
 }
+/*======= 概要 =======*/
 
-/*　活動場所　*/
+/*========= index =========*/
+
+
+/*--------- introduction ---------*/
+
+/*------- 活動場所 -------*/
 #place .flame{
     height: 100%;
-    background-image: url("img/blackbord.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    padding: 100px 32px;
+    padding: 32px 48px 88px;
+    position: relative;
 }
 #place p{
     font-family: "tanuki_chalk";
     color: #ffffff;
     opacity: 0.9;
-    font-size: 3em; 
+    font-size: 3em;
+    position: relative;
+    z-index: 2;
 }
+#place img{
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+/*======= 活動場所 =======*/
 
-/*　部員数　*/
-#club_members{
-    background-image: url("img/whitebord.svg");
-    background-repeat: no-repeat;
-    background-position: right 15% bottom;
-    padding-bottom: 4%;
+
+/*------- 部員数 -------*/
+#club_members .flame{
+    position: relative;
+    width: 100%;
+    padding: 32px 0;
 }
 #club_members dl{
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,14 +187,27 @@ main section > :last-child{
 #club_members .dl_row{
     display: flex;
 }
-#club_members dt,dd{
+#club_members dt,
+#club_members dd{
     font-size: 2em;
     line-height: 2em;
+    position: relative;
+    z-index: 2;
 }
+#club_members img{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 3em;
+}
+/*======= 部員数 =======*/
 
-/*　週間予定　*/
-#weekly_schedule{
-}
+/*========= introduction =========*/
+
+
+/*--------- activitySchedule ---------*/
+
+/*------- 週間予定 -------*/
 #weekly_schedule table{
     border-collapse: collapse;
     margin: 48px 0;
@@ -149,76 +225,58 @@ main section > :last-child{
     padding: 0 10px;
     height: 40px;
 }
+/*======= 週間予定 =======*/
 
-/*　年間予定　*/
-#yearly_schedule{
+
+/*------- 年間予定 -------*/
+#calender_box{
+    width: 90%;
 }
 #yearly_schedule dl{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #f0f0f0;
-}
-#yearly_schedule .dl_row{
     width: 100%;
     display: flex;
+    background-color: #f0f0f0;
     border: solid 1px #000000;
     border-bottom: none;
 }
-#yearly_schedule .dl_row:last-child{
+#yearly_schedule dl:last-child{
     border-bottom: solid 1px #000000;
 }
 #yearly_schedule dt{
+    width: 20%;
     font-size: 1.5em;
     line-height: 2em;
+    text-align: center;
     padding: 0 1em;
     border-right: solid 1px #000000;
 }
 #yearly_schedule dd{
+    width: 80%;
     margin: auto 0;
     font-size: 1em;
     text-indent: 1em;
 }
+/*======= 年間予定 =======*/
 
-/*　資格について　*/
-.note{
-    background-color: #fef8eb;
-    border: solid 2px #999999; 
-    padding: 0 1em 0 2em;
-    position: relative;
-}
-.note p{
-    border-bottom: dashed 1px #cccccc;
-    line-height: 1.5;
-    padding: 0.5em 0 0.5em 0.5em;
-}
+/*========= activitySchedule =========*/
+
+
+/*--------- qualification ---------*/
+
+/*------- 資格について -------*/
 #about_qualification mark{
     background: linear-gradient(to bottom,transparent 40%,#ffff00 40% 80%,transparent 80%);
 }
-.note p:last-of-type{
-    border-bottom: none;
-}
-.note p::before{
-    content: "";
-    position: absolute;
-    border-right: dotted 10px #dddddd;
-    height:90%;
-    top:0.5em;
-    left:0.5em;
-}
+/*======= 資格について =======*/
 
-/*　目指す資格　*/
+
+/*------- 目指す資格 -------*/
 #target ul{
     background-color: #fef8eb;
     width: max(425px,90%);
     padding: 16px 0;
     list-style-type: none;
-    background-image: url("img/qualification.svg");
-    background-position: top right;
-    background-repeat: no-repeat;
-    background-size: 30%;
-    z-index: 1;
+    position: relative;
 }
 #target li{
     font-size: 1.5em;
@@ -227,7 +285,6 @@ main section > :last-child{
     border-bottom: dashed 1px #cccccc;
     line-height: 1.5em;
     padding: 0.5em 0 0.5em 0.5em;
-
 }
 #target li::before{
     content: "・";
@@ -238,12 +295,69 @@ main section > :last-child{
     content: "";
     position: absolute;
     border-right: dotted 9px #dddddd;
-    height:90%;
-    top:0em;
+    height: 90%;
+    top: 0;
     left: 8px;
 }
-#target .wave{
+#target img{
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+/*======= 目指す資格 =======*/
+
+/*========= qualification =========*/
+
+
+/*========== コンテンツ ==========*/
+
+
+/*---------- フッター ----------*/
+
+footer{
+    text-align: center;
+    background-color: #f0f0f0e0;
+    border-radius: 0 0 4px 4px;
+    display: flex;
+    flex-direction: column;
+}
+footer dl{
+    margin: auto;
+}
+footer .dl_row{
+    display: flex;
+}
+footer dd{
+    text-indent: 0.5em;
 }
 
+/*========== フッター ==========*/
 
-/*　顧問からのメッセージ　*/
+
+
+@media screen and (max-width:1100px) {
+    #container{
+        width: 710px;
+    }
+    header p{
+        font-size: 2.79em;
+    }
+    #contents section{
+        width: 90%;
+    }
+}
+
+/*
+@media screen and (max-width:750px) {
+    #container{
+        width: 100%;
+    }
+    header p{
+        font-size: 2.79em;
+    }
+    #contents section{
+        width: 95%;
+    }
+}*/
