@@ -240,16 +240,16 @@ body{
 /*------- 目指す資格 -------*/
 #target .flame{
     width: auto;
-    /* padding: 16px 0 0; */
     position: relative;
 }
 #target ul{
     background-color: #fef8eb;
     list-style-type: none;
     padding: 16px 0 ;
+    padding-right: 40%;
 }
 #target li{
-    font-size: 1.5em;
+    font-size: 1em;
     text-indent: 2em;
     position: relative;
     border-bottom: dashed 1px #cccccc;
@@ -264,7 +264,7 @@ body{
 #target li::after{
     content: "";
     position: absolute;
-    border-right: dotted 9px #dddddd;
+    border-right: dotted 9px #726a6a;
     height: 90%;
     top: 0;
     left: 8px;
