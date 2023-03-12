@@ -153,7 +153,6 @@ body{
 /*------- 部員数 -------*/
 #club_members .flame{
     position: relative;
-    width: 100%;
     padding: 32px 0;
 }
 #members_box{
@@ -172,9 +171,10 @@ body{
 }
 #club_members img{
     position: absolute;
+    height: 100%;
     z-index: 1;
     top: 0;
-    right: 3em;
+    left: 3em;
 }
 /*======= 部員数 =======*/
 
