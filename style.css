@@ -21,21 +21,6 @@ body{
 
 /*---------- ヘッダー ----------*/
 
-header{
-    height: 100px;
-    background-color: #f0f0f0e0;
-    border-radius: 4px 4px 0 0;
-    display: flex;
-}
-header p{
-    font-size: 3em;
-    padding: 8px 32px;
-    font-family: "yuji_title";
-}
-#club{
-    margin-left: auto;
-}
-
 /*========== ヘッダー ==========*/
 
 
@@ -322,7 +307,7 @@ header p{
 
 @media screen and (max-width:1100px) {
     #container{
-        width: 740px;
+        width: 100%;
     }
     #container{
         font-size: 1em;
