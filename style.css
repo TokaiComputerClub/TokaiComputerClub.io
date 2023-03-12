@@ -9,12 +9,8 @@
     padding: 0;
     margin: 0;
 }
-
-
 body{
-    background-image: url("images/neverstoplearning_back.jpg");
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: #f0f0f0;
 }
 
 #container{
@@ -134,7 +130,6 @@ header p{
 /*======= .spacing =======*/
 
 
-/*--------- index ---------*/
 
 /*------- 概要 -------*/
 #overview{
@@ -145,10 +140,6 @@ header p{
 }
 /*======= 概要 =======*/
 
-/*========= index =========*/
-
-
-/*--------- introduction ---------*/
 
 /*------- 活動場所 -------*/
 #place .flame{
@@ -201,10 +192,6 @@ header p{
 }
 /*======= 部員数 =======*/
 
-/*========= introduction =========*/
-
-
-/*--------- activitySchedule ---------*/
 
 /*------- 週間予定 -------*/
 #weekly_schedule table{
@@ -257,10 +244,6 @@ header p{
 }
 /*======= 年間予定 =======*/
 
-/*========= activitySchedule =========*/
-
-
-/*--------- qualification ---------*/
 
 /*------- 資格について -------*/
 #about_qualification mark{
@@ -310,32 +293,29 @@ header p{
 }
 /*======= 目指す資格 =======*/
 
-/*========= qualification =========*/
 
+
+/*------- 部活紹介動画 -------*/
+#PRvideo .flame{
+    position: relative;
+}
+#block_video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fffffff0;
+    padding: 10% 0;
+    text-align: center;
+    display: block;
+}
+
+/*======= 部活紹介動画 =======*/
 
 /*========== コンテンツ ==========*/
 
 
-/*---------- フッター ----------*/
-
-footer{
-    text-align: center;
-    background-color: #f0f0f0e0;
-    border-radius: 0 0 4px 4px;
-    display: flex;
-    flex-direction: column;
-}
-#link_box{
-    margin: auto;
-}
-footer dl{
-    display: flex;
-}
-footer dd{
-    text-indent: 0.5em;
-}
-
-/*========== フッター ==========*/
 
 
 
