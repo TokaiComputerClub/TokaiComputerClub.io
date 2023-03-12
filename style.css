@@ -129,9 +129,11 @@ body{
 
 /*------- 活動場所 -------*/
 #place .flame{
-    height: 100%;
-    padding: 32px 48px 88px;
+    padding: 0;
     position: relative;
+    padding: 15% 10%;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 #place p{
     font-family: "tanuki_chalk";
@@ -142,6 +144,7 @@ body{
     z-index: 2;
 }
 #place img{
+    height: 100%;
     z-index: 1;
     position: absolute;
     top: 0;
@@ -151,9 +154,10 @@ body{
 
 
 /*------- 部員数 -------*/
-#club_members .flame{
+#club_members > .flame{
     position: relative;
-    padding: 32px 0;
+    padding: 5% 20% 15%;
+    margin-bottom: 0 !important;
 }
 #members_box{
     margin: auto;
@@ -239,27 +243,27 @@ body{
 
 /*------- 目指す資格 -------*/
 #target .flame{
-    width: auto;
+    width: fit-content;
     position: relative;
+    padding-right: 20%;
 }
 #target ul{
+    width: 160%;
     background-color: #fef8eb;
     list-style-type: none;
     padding: 16px 0 ;
-    padding-right: 40%;
 }
 #target li{
     font-size: 1em;
-    text-indent: 2em;
     position: relative;
     border-bottom: dashed 1px #cccccc;
     line-height: 1.5em;
-    padding: 0.5em 0 0.5em 0.5em;
+    padding: 0.5em 0 0.5em 3em;
 }
 #target li::before{
     content: "・";
     position: absolute;
-    left: -1em;
+    left: 2em;
 }
 #target li::after{
     content: "";
@@ -272,8 +276,8 @@ body{
 #target img{
     height: 100%;
     position: absolute;
-    
     top: 0;
+    right: 0;
     z-index: 1;
 }
 /*======= 目指す資格 =======*/
