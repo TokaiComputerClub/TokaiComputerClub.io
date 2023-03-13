@@ -21,6 +21,9 @@ body{
 
 /*---------- ヘッダー ----------*/
 
+header{
+    display: flex;
+}
 /*========== ヘッダー ==========*/
 
 
@@ -34,6 +37,9 @@ body{
 }
 #Slider img{
     height: 500px;
+}
+#Slider .slick-arrow{
+    height: 64px;
 }
 
 /*========== スライドショー ==========*/
@@ -131,7 +137,7 @@ body{
 #place .flame{
     padding: 0;
     position: relative;
-    padding: 15% 10%;
+    padding: 5em 0;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
@@ -148,15 +154,15 @@ body{
     z-index: 1;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -1.5em;
 }
 /*======= 活動場所 =======*/
 
 
 /*------- 部員数 -------*/
-#club_members > .flame{
+#club_members .flame{
     position: relative;
-    padding: 5% 20% 15%;
+    padding: 2em 9em 6em;
     margin-bottom: 0 !important;
 }
 #members_box{
@@ -206,7 +212,7 @@ body{
 
 /*------- 年間予定 -------*/
 #calender_box{
-    width: auto;
+    width: 80%;
 }
 #yearly_schedule dl{
     width: 100%;
@@ -219,6 +225,7 @@ body{
     border-bottom: solid 1px #000000;
 }
 #yearly_schedule dt{
+    width: fit-content;
     font-size: 1.5em;
     line-height: 2em;
     text-align: center;
@@ -245,13 +252,13 @@ body{
 #target .flame{
     width: fit-content;
     position: relative;
-    padding-right: 20%;
 }
 #target ul{
-    width: 160%;
+    width: fit-content;
     background-color: #fef8eb;
     list-style-type: none;
-    padding: 16px 0 ;
+    padding: 16px 0;
+    padding-right: 15%;
 }
 #target li{
     font-size: 1em;
@@ -268,17 +275,24 @@ body{
 #target li::after{
     content: "";
     position: absolute;
-    border-right: dotted 9px #726a6a;
+    border-right: dotted 9px #aaaaaa;
     height: 90%;
     top: 0;
     left: 8px;
 }
-#target img{
+#target li:last-child{
     height: 100%;
     position: absolute;
     top: 0;
     right: 0;
     z-index: 1;
+}
+#target li:last-child::before,
+#target li:last-child::after{
+    display: none;
+}
+#target img{
+    height: 100%;
 }
 /*======= 目指す資格 =======*/
 
@@ -298,6 +312,14 @@ body{
     padding: 10% 0;
     text-align: center;
     display: block;
+    z-index: 1;
+}
+#PRvideo button{
+    margin-top: 16px;
+    padding: 32px;
+    border-radius: 4px;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
 /*======= 部活紹介動画 =======*/
