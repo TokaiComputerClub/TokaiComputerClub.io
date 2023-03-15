@@ -18,7 +18,11 @@ $(document).ready(function(){
 
     //質問ボタン
     $("#question_button").on("click",() => {
-        $("#form_container").css({"display":"flex"})
+        $("#form_body").css({"display":"flex"})
+    })
+    //キャンセルボタン
+    $("#cancel").on("click",() => {
+        $("#form_body").css({"display":"none"})
     })
 });
 
