@@ -23,6 +23,11 @@ body{
 
 header{
     display: flex;
+    background-color: #ffffff;
+    padding: 16px 10%;
+}
+#club{
+    margin-left: auto;
 }
 /*========== ヘッダー ==========*/
 
@@ -30,16 +35,41 @@ header{
 
 /*---------- スライドショー ----------*/
 
-#Slider{
+#Slider_container{
+    position: relative;
     width: 100%;
-    margin: 32px 0;
-    height: 500px;
+    margin: 128px 0;
+    padding: 64px 0;
+    background: url(images/wood_wall.jpg);
+}
+#Slider_container .flame{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 428px;
+}
+#Slider{
 }
 #Slider img{
-    height: 500px;
+    height: 300px;
+    margin: auto;
 }
-#Slider .slick-arrow{
+.slick-arrow{
     height: 64px;
+    z-index: 2;
+}
+.slick-prev{
+    left: 2px;
+}
+.slick-next{
+    right: 25px;
+}
+.slick-arrow::before{
+    font-size: 45px;
+}
+#Slider li{
 }
 
 /*========== スライドショー ==========*/
@@ -323,6 +353,24 @@ header{
 }
 
 /*======= 部活紹介動画 =======*/
+
+
+/*------- 質問フォーム -------*/
+
+#form_container{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #55555599;
+}
+
+/*======= 質問フォーム =======*/
 
 /*========== コンテンツ ==========*/
 
